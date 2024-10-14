@@ -7,8 +7,9 @@ const TimeAgo = ({ timestamp }) => {
 
   if(timestamp){
     const time = parseISO(timestamp)
-    const timePeriod = formatDistanceToNow(time)
-    timeAgo = `${timePeriod} ago`
+    const timePeriod = formatDistanceToNow(time, { addSuffix: true })
+    // timeAgo = `${timePeriod}`
+    timeAgo = timePeriod
 
   }
   return (
